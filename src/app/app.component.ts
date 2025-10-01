@@ -1,12 +1,17 @@
 import { Component } from '@angular/core';
-import { RouterOutlet } from '@angular/router';
+
+const todos = [
+  { id: 1, title: 'Learn Angular', completed: false },
+  { id: 2, title: 'JS', completed: true },
+  { id: 3, title: 'Vue', completed: false },
+];
 
 @Component({
   selector: 'app-root',
-  imports: [RouterOutlet],
   templateUrl: './app.component.html',
-  styleUrl: './app.component.scss'
+  styleUrls: ['./app.component.scss'],
 })
 export class AppComponent {
-  title = 'angular-todo-app';
+  editing = false;
+  todos = todos;
 }
